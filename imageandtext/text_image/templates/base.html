@@ -24,11 +24,16 @@
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'Mishkat' %}">Mishkat-al-Masabih</a>
                 </li>
+                {% if user.is_authenticated %}
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'haidth' %}">Hadith Upload</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'tatorial' %}">Random Topic</a>
+                </li>
+                {% endif %}
+                <li class="nav-item">
+                    <a class="nav-link" href="">Login</a>
                 </li>
               </ul>
             </div>
