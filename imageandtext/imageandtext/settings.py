@@ -29,7 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['https://hadith-app-6b82e0e59795.herokuapp.com/',"hadith-app-6b82e0e59795.herokuapp.com",'localhost','https://hadith-app-6b82e0e59795.herokuapp.com']
 
-
+CSRF_TRUSTED_ORIGINS = ["https://hadith-app-6b82e0e59795.herokuapp.com","https://hadith-app-6b82e0e59795.herokuapp.com/"]
 # Application definition
 
 INSTALLED_APPS = [
