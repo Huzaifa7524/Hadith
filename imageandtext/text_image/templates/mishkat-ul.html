@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-6 offset-3 mt-2">
+                <div class="alert text-light" role="alert">
+                    <h2 class="text-center text-light">Mishkat al-Masabih مشكاة المصابيح</h2>
+                    <hr>
+                  </div>
+            </div>
+        </div>
+        {% for hadith in data %}
+        <div class="row">
+            <div class="col-6 offset-3">
+                <div class="alert text-light" role="alert">
+                    <h2 class="text-center">{{ hadith.chapter_name }}</h2>
+                    <hr>
+                  </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row mt-0 ml-auto mr-auto">
+                <div class="col-12  mt-0 ">
+                    <div class="alert alert-warning " role="alert">
+                        <h5 class="text-center hadith_no">Hadith NO: {{ hadith.hadith_number }}</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="alert" role="alert">
+                        <p class="urdu">
+                            {{ hadith.text }}
+                        </p>
+                        <br>
+                        {% if hadith.hadith_status == 'Sahih' %}
+                        <p class="urdu"> حکمِ حدیث : <span class="sahi">صحیح</span> </p>
+                        {% elif hadith.hadith_status == 'Zaif' %}
+                        <p class="urdu"> حکمِ حدیث : <span class="zaif">ضعیف</span> </p>
+                        {% elif hadith.hadith_status == 'Hasan' %}
+                        <p class="urdu"> حکمِ حدیث : <span class="text-warning">حسن</span> </p>
+                        {% else %}
+                        <p class="urdu"> حکمِ حدیث : <span class="sahi">---</span> </p>
+                        {% endif %}
+                        <hr class="text-light">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <marquee  direction = "right" class="p-3">
+                    <h5 class="" > The Prophet said, Convey (my teachings) to the people even if it were a single sentence,
+                        <span class="marquee">     
+                        أَنّ النَّبِيَّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ ، قَالَ : بَلِّغُوا عَنِّي وَلَوْ آيَةً    --   
+                        نبی کریم صلی اللہ علیہ وسلم نے فرمایا میرا پیغام لوگوں کو پہنچاؤ! اگرچہ ایک ہی آیت ہو
+        
+                        </span>  
+                    </h5> 
+                </marquee>
+                <hr>
+            </div>
+            
+        </div>
+        {% endfor %}
+        
+        
+    </div>
+    
+{% endblock  %}

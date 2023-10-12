@@ -1,0 +1,49 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap');
+
+/* add image as a background */
+body {
+    background-image: url("./images/s1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 50px;
+    font-family: 'Noto Nastaliq Urdu', serif;
+}
+.hadith_no{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Noto Nastaliq Urdu', serif;
+}
+.urdu{
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-family: 'Noto Nastaliq Urdu', serif;
+    line-height: 4.5rem !important;
+}
+.zaif{
+    color: red;
+}
+.sahi{
+    color: green;
+}
+
+.bg-dark{
+    background-color: transparent !important;
+}
+hr{
+    width: 100%;
+    border: 1px solid white;
+}
+.goog-te-gadget .goog-te-combo{
+    width: 100%;    
+    padding: 10px;
+}

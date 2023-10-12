@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-8 offset-2 mt-5 ">
+      <!-- upload_image.html -->
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-secondary mt-2 mb-2">Upload</button>
+    </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock  %}
+
+
