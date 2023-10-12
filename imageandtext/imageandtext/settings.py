@@ -27,7 +27,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["hadith-app-6b82e0e59795.herokuapp.com",'localhost']
+ALLOWED_HOSTS = ['https://hadith-app-6b82e0e59795.herokuapp.com/',"hadith-app-6b82e0e59795.herokuapp.com",'localhost','https://hadith-app-6b82e0e59795.herokuapp.com']
 
 
 # Application definition
