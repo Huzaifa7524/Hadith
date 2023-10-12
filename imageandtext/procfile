@@ -1,2 +1,0 @@
-web: waitress-serve --port=$PORT imageandtext.wsgi:application 
-# aaa
